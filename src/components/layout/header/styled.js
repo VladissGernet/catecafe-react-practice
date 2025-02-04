@@ -2,9 +2,17 @@ import styled from 'styled-components';
 
 import { NavLink } from 'react-router-dom';
 
+import { StyledContainer } from '../container/styled';
+
 const StyledHeader = styled.header`
   height: 100px;
   background-color: tomato;
+
+  ${StyledContainer} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const StyledFormNavLink = styled(NavLink)`
