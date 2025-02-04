@@ -1,15 +1,17 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 
 import { StyledHeader, StyledFormNavLink } from './styled';
 
+import { Logo } from '/src/components/ui/logo/logo';
+
 const Header = () => {
-  const isLocationNotForm = useLocation().pathname !== '/form';
+const isLocationForm = useMatch({ path: '/form' });
 
   return (
     <StyledHeader>
-      Header
-      {isLocationNotForm && <StyledFormNavLink to="/form">Form</StyledFormNavLink>}
+      <Logo />
+      {!isLocationForm && <StyledFormNavLink to="/form">Form</StyledFormNavLink>}
     </StyledHeader>
   );
 };

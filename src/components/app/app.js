@@ -8,7 +8,6 @@ import { Index } from '/src/components/pages/index/index';
 import { Form } from '/src/components/pages/form/form';
 
 // TODO
-// 1. Создать Router
 // 2. Создать Layout
 // 3. Создать Header
 // 4. Создать Footer
