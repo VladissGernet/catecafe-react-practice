@@ -3,31 +3,24 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 import { StyledContainer } from '../container/styled';
+import { ButtonStyles } from '/src/components/styled';
 
 const StyledHeader = styled.header`
-  height: 100px;
-  background-color: tomato;
+  padding: 30px 0;
+  background-color: ${(props) => props.theme.colorLight};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   ${StyledContainer} {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    min-height: 67px;
   }
 `;
 
 const StyledFormNavLink = styled(NavLink)`
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
-
-  border: 4px solid black;
-  padding: 20px;
-  display: inline-block;
-
-  &:hover {
-    opacity: 0.5;
-  }
+  ${ButtonStyles}
 `;
 
 export { StyledHeader, StyledFormNavLink };

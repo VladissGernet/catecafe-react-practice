@@ -15,4 +15,4 @@ const VisuallyHiddenInput = styled.input`
   }
 `;
 
-export default VisuallyHiddenInput;
+export { VisuallyHiddenInput };

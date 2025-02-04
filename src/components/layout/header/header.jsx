@@ -6,9 +6,6 @@ import { StyledHeader, StyledFormNavLink } from './styled';
 import { Container } from 'src/components/layout/container/container';
 import { Logo } from '/src/components/ui/logo/logo';
 
-// TODO
-// 2. Стилизовать кнопку перехода на form
-
 const Header = () => {
 const isLocationForm = useMatch({ path: '/form' });
 
@@ -16,7 +13,7 @@ const isLocationForm = useMatch({ path: '/form' });
     <StyledHeader>
       <Container>
         <Logo />
-        {!isLocationForm && <StyledFormNavLink to="/form">Form</StyledFormNavLink>}
+        {!isLocationForm && <StyledFormNavLink to="/form">Купить билет</StyledFormNavLink>}
       </Container>
     </StyledHeader>
   );
