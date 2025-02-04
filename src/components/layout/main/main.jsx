@@ -1,12 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import { StyledMain } from './styled';
 
 const Main = () => {
   return (
     <StyledMain>
-      Main
-      {/* Сделать тянущимся на всю страницу */}
+      <Outlet />
     </StyledMain>
   );
 };

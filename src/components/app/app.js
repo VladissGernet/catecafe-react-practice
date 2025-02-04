@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ScrollToTop } from '/src/components/blocks/scroll-to-top/scroll-to-top';
 import { PageWrapper } from '/src/components/layout/page-wrapper/page-wrapper';
+import { Index } from '/src/components/pages/index/index';
+import { Form } from '/src/components/pages/form/form';
 
 // TODO
 // 1. Создать Router
@@ -21,7 +23,10 @@ export default function App() {
       <ScrollToTop />
       <GlobalStyle />
         <Routes>
-          <Route path="/" element={<PageWrapper />} />
+          <Route path="/" element={<PageWrapper />}>
+            <Route index element={<Index />} />
+            <Route path="form" element={<Form />} />
+          </Route>
         </Routes>
     </BrowserRouter>
   );
