@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const LogoText = styled.span`
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
 `;
 
