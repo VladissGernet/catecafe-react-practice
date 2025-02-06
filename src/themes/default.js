@@ -1,5 +1,6 @@
 export const defaultTheme = {
   colorBlackForText: "#333333",
+  colorTitle: "#000000",
   colorLight: "#cdcdcd",
   colorTextLight: "#ffffff",
   colorGray: "#f6f6f6",

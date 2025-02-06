@@ -1,11 +1,10 @@
 import React from 'react';
-import { Container } from 'src/components/layout/container/container';
+
+import { Hero } from 'src/components/blocks/hero/hero';
 
 const Index = () => {
   return (
-    <Container>
-      Index page here
-    </Container>
+    <Hero />
   );
 };
 
