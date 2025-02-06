@@ -15,6 +15,17 @@ const StyledTitle = styled.h1`
     }
     return fontSize;
   }};
-`;
+  line-height: ${(props) => {
+    let lineHeight = "40px";
+    if (props.$size === TitleSizes.BIG) {
+      lineHeight = "50px";
+    }
+    if (props.$size === TitleSizes.SMALL) {
+      lineHeight = "30px";
+    }
+    return lineHeight;
+  }};
+  font-weight: 700;
+  `;
 
 export { StyledTitle };
