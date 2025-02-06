@@ -24,7 +24,7 @@ const Hero = () => {
             с ними.
         </Description>
         <WorkTime>
-          Работаем с <Time datetime="T10:00">10:00</Time> до <Time datetime="T22:00">22:00</Time>
+          Работаем с <Time dateTime="T10:00">10:00</Time> до <Time dateTime="T22:00">22:00</Time>
         </WorkTime>
         <Address>Санкт-Петербург, Большая Конюшенная улица, 27</Address>
       </Container>
