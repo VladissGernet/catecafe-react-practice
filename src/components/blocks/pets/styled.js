@@ -59,8 +59,6 @@ const StyledLink = styled(Link)`
   text-align: center;
 `;
 
-// Закончить стилизовать ссылку
-
 export {
   StyledPets,
   StyledPetsList,

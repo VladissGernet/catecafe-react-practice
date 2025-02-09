@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledFooter } from "./styled";
+import { StyledFooter, StyledData } from "./styled";
 
 import { Container } from '/src/components/layout/container/container';
 import { Logo } from '/src/components/ui/logo/logo';
@@ -10,6 +10,7 @@ const Footer = () => {
     <StyledFooter>
       <Container>
         <Logo />
+        <StyledData>© 2022 Котокафе</StyledData>
       </Container>
     </StyledFooter>
   );
