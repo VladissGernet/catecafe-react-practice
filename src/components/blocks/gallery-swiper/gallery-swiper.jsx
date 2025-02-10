@@ -20,10 +20,11 @@ const GallerySwiper = () => {
   return (
     <StyledSwiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={2}
+      spaceBetween={100}
+      slidesPerView={1}
       navigation
       pagination={pagination}
+      loop
     >
       <StyledSlide>Slide 1</StyledSlide>
       <StyledSlide>Slide 2</StyledSlide>

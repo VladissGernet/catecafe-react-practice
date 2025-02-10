@@ -11,29 +11,41 @@ const StyledSwiper = styled(Swiper)`
   outline: 5px solid tomato;
   height: 200px;
 
-  padding-bottom: 100px;
+  padding: 0 90px 100px;
 
   .swiper-button-next,
   .swiper-button-prev {
-    outline: 5px solid green;
-
     position: absolute;
-    bottom: 20px;
-    width: 20px;
-    height: 20px;
+    top: 100px;
+    width: 64px;
+    height: 64px;
     cursor: pointer;
+    z-index: 1;
 
-    z-index: 11;
+    border-radius: 50%;
+    background-color: ${(props) => props.theme.colorForButton};
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+
+      color: ${(props) => props.theme.colorTextLight};
+    }
   }
 
   .swiper-button-prev {
+    left: 0;
+
     &::before {
       content: "<";
     }
   }
 
   .swiper-button-next {
-    right: 50px;
+    right: 0;
 
     &::before {
       content: ">";
