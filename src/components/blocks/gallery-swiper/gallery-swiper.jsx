@@ -8,7 +8,7 @@ import {
   StyledSlide
  } from './styled';
 
-const GallerySwiper = () => {
+const GallerySwiper = ({slides}) => {
   // Доделать особую пагинацию
   const pagination = {
     clickable: true,
@@ -26,10 +26,21 @@ const GallerySwiper = () => {
       pagination={pagination}
       loop
     >
-      <StyledSlide>Slide 1</StyledSlide>
+      {
+        slides
+        && slides.length
+        && slides.map((slide) => {
+          return (
+            <StyledSlide key={slide.id}>
+              <img src={slide.src} alt={slide.alt} />
+            </StyledSlide>
+          );
+        })
+      }
+      {/* <StyledSlide>Slide 1</StyledSlide>
       <StyledSlide>Slide 2</StyledSlide>
       <StyledSlide>Slide 3</StyledSlide>
-      <StyledSlide>Slide 4</StyledSlide>
+      <StyledSlide>Slide 4</StyledSlide> */}
     </StyledSwiper>
   )
 };

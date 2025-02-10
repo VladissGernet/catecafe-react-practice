@@ -6,12 +6,12 @@ import { GallerySwiper } from 'src/components/blocks/gallery-swiper/gallery-swip
 
 import { StyledGallery } from './styled';
 
-const Gallery = () => {
+const Gallery = ({slides}) => {
   return (
     <StyledGallery>
       <Container>
         <Title level={2} size={TitleSizes.BIG}>Галерея нашего кафе</Title>
-        <GallerySwiper />
+        <GallerySwiper slides={slides}/>
       </Container>
     </StyledGallery>
   );
