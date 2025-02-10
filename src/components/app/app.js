@@ -11,11 +11,7 @@ import { Index } from '/src/components/pages/index/index';
 import { Form } from '/src/components/pages/form/form';
 
 // TODO
-// 5. Создать Main
-// 5.1 Hero
-// 5.2 Stars
 // 6. Создать Form страницу оформления
-// 7. Создать mock данные и прокинуть их createContext
 // 8. Создать страницу 404
 
 const AppContext = createContext();

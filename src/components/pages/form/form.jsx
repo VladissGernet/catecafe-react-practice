@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { Gallery } from 'src/components/blocks/gallery/gallery';
+
 const Form = () => {
   return (
-    <div>
-      Form page
-    </div>
+    <Gallery />
   )
 };
 
