@@ -4,7 +4,7 @@ import { StyledTitle } from '/src/components/ui/title/styled';
 import { StyledSwiper } from '/src/components/blocks/gallery-swiper/styled';
 
 const StyledGallery = styled.section`
-  padding: 100px 0;
+  padding: 100px 0 20px;
 
   background-color: ${(props) => props.theme.colorForLightBackground};
 
