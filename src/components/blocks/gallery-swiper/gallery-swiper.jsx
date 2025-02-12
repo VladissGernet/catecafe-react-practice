@@ -1,20 +1,25 @@
 import React from 'react';
 
+import { Img } from 'src/components/styled/img';
+
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import {
   StyledSwiper,
-  StyledSlide
+  StyledSlide,
  } from './styled';
 
+const renderSwiperBullets = (index, className, slides) => {
+  return `<div class="${className}">
+    <img class="${className}-img" src="${slides[index].src}" alt="${slides[index].alt}">
+  </div>`;
+};
+
 const GallerySwiper = ({slides}) => {
-  // Доделать особую пагинацию
   const pagination = {
     clickable: true,
-    renderBullet: (index, className) => {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    },
+    renderBullet: (index, className) => renderSwiperBullets(index, className, slides),
   };
 
   return (
@@ -32,15 +37,11 @@ const GallerySwiper = ({slides}) => {
         && slides.map((slide) => {
           return (
             <StyledSlide key={slide.id}>
-              <img src={slide.src} alt={slide.alt} />
+              <Img src={slide.src} alt={slide.alt} />
             </StyledSlide>
           );
         })
       }
-      {/* <StyledSlide>Slide 1</StyledSlide>
-      <StyledSlide>Slide 2</StyledSlide>
-      <StyledSlide>Slide 3</StyledSlide>
-      <StyledSlide>Slide 4</StyledSlide> */}
     </StyledSwiper>
   )
 };

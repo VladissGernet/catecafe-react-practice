@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Img, ImgStyles } from 'src/components/styled';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,15 +10,17 @@ import 'swiper/css';
 import 'swiper/css/a11y';
 
 const StyledSwiper = styled(Swiper)`
-  outline: 5px solid tomato;
-  height: 200px;
+  padding: 0 90px 184px;
 
-  padding: 0 90px 100px;
+  ${Img} {
+    width: 100%;
+    height: 100%;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {
     position: absolute;
-    top: 100px;
+    bottom: 40px;
     width: 64px;
     height: 64px;
     cursor: pointer;
@@ -62,20 +66,30 @@ const StyledSwiper = styled(Swiper)`
     left: 0;
     width: 100%;
 
-    outline: 5px solid blue;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 
   .swiper-pagination-bullet {
-    margin: 0 4px;
-
-    width: 8px;
-    height: 8px;
-    display: inline-block;
-    border-radius: 50%;
-    background: #000;
+    width: 167px;
+    height: 128px;
+    border-radius: 20px;
+    overflow: hidden;
     opacity: 0.2;
 
     cursor: pointer;
+
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+
+    &-img {
+      ${ImgStyles}
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     &-active {
       opacity: 1;
@@ -86,11 +100,12 @@ const StyledSwiper = styled(Swiper)`
 `;
 
 const StyledSlide = styled(SwiperSlide)`
-  outline: 5px solid green;
+  border-radius: 30px;
+  overflow: hidden;
 `;
 
 export {
   StyledSwiper,
-  StyledSlide
+  StyledSlide,
  };
 
