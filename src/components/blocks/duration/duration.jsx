@@ -7,15 +7,17 @@ import {
   DurationUl
  } from './styled';
 
-const ITEMS = 6;
-
-const Duration = ({ onChange }) => {
-  const items = Array.from({ length: ITEMS }, (_, index) => index + 1);
+const Duration = ({
+  onChange,
+  durationOptions
+}) => {
 
   return (
     <DurationUl>
       {
-        items.map((item) => (
+        durationOptions
+        && durationOptions.length
+        && durationOptions.map((item) => (
           <li key={item}>
           <Label>
             <VisuallyHiddenInput
