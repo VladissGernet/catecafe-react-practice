@@ -11,10 +11,7 @@ const DurationUl = styled(Ul)`
   user-select: none;
 `;
 
-const Label = styled.label`
-  display: inline-block;
-
-  span {
+const DurationText = styled.span`
     padding: 10px;
     border-radius: 10px;
     background-color: ${(props) => props.theme.colorGray};
@@ -23,9 +20,12 @@ const Label = styled.label`
     cursor: pointer;
 
     transition: all 0.3s ease;
-  }
+`;
 
-  ${VisuallyHiddenInput}:checked + span {
+const DurationRadioLabel = styled.label`
+  display: inline-block;
+
+  ${VisuallyHiddenInput}:checked + ${DurationText} {
     background-color: ${(props) => props.theme.colorForButton};
     color: ${(props) => props.theme.colorTextLight};
 
@@ -34,6 +34,7 @@ const Label = styled.label`
 `;
 
 export {
-  Label,
-  DurationUl
+  DurationRadioLabel,
+  DurationUl,
+  DurationText
  };

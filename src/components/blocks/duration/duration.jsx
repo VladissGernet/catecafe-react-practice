@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { VisuallyHiddenInput } from 'src/components/styled';
+import { RadioButton } from 'src/components/ui/radio-button/radio-button';
 
 import {
-  Label,
+  DurationRadioLabel,
+  DurationText,
   DurationUl
  } from './styled';
 
@@ -19,15 +20,16 @@ const Duration = ({
         && durationOptions.length
         && durationOptions.map((item) => (
           <li key={item}>
-          <Label>
-            <VisuallyHiddenInput
+            <RadioButton
+              labelComponent={DurationRadioLabel}
+              textComponent={DurationText}
+              item={item}
+              onChange={onChange}
               type="radio"
               name="duration"
-              value={item}
-              onChange={onChange}
-            />
-            <span>{item}</span>
-          </Label>
+            >
+              {item}
+            </RadioButton>
           </li>
         ))
       }
