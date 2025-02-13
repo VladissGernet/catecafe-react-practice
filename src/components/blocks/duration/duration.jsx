@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { VisuallyHiddenInput } from 'src/components/styled';
+
 import {
   Label,
   DurationUl
@@ -16,7 +18,7 @@ const Duration = ({ onChange }) => {
         items.map((item) => (
           <li key={item}>
           <Label>
-            <input
+            <VisuallyHiddenInput
               type="radio"
               name="duration"
               value={item}

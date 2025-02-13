@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
+import { VisuallyHiddenInput } from 'src/components/styled';
+
 import { Ul } from 'src/components/styled';
 
 const DurationUl = styled(Ul)`
   display: flex;
   gap: 20px;
+
+  user-select: none;
 `;
 
 const Label = styled.label`
@@ -21,11 +25,7 @@ const Label = styled.label`
     transition: all 0.3s ease;
   }
 
-  input {
-    display: none;
-  }
-
-  input:checked + span {
+  ${VisuallyHiddenInput}:checked + span {
     background-color: ${(props) => props.theme.colorForButton};
     color: ${(props) => props.theme.colorTextLight};
 
