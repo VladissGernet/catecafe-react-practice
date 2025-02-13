@@ -9,10 +9,12 @@ const RadioButton = ({
   onChange,
   type,
   name,
+  selectedValue,
   children
  }) => {
   const LabelComponent = labelComponent;
   const TextComponent = textComponent;
+  const isChecked = String(item) === String(selectedValue);
 
   return (
     <LabelComponent>
@@ -22,7 +24,9 @@ const RadioButton = ({
         value={item}
         onChange={onChange}
       />
-      <TextComponent>
+      <TextComponent
+        $isChecked={isChecked}
+      >
         {children}
       </TextComponent>
     </LabelComponent>

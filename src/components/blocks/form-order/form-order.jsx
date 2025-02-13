@@ -8,13 +8,13 @@ import { Duration } from 'src/components/blocks/duration/duration';
 
 const FormOrder = () => {
   const [duration, setDuration] = useState(null);
-  console.log(duration);
 
   return (
     <Form>
       <Duration
         onChange={(el) => setDuration(el.target.value)}
         durationOptions={buyOptions.durationOptions}
+        durationValue={duration}
       />
     </Form>
   )

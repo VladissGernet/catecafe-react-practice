@@ -10,9 +10,9 @@ import {
 
 const Duration = ({
   onChange,
-  durationOptions
+  durationOptions,
+  durationValue
 }) => {
-
   return (
     <DurationUl>
       {
@@ -23,6 +23,7 @@ const Duration = ({
             <RadioButton
               labelComponent={DurationRadioLabel}
               textComponent={DurationText}
+              selectedValue={durationValue}
               item={item}
               onChange={onChange}
               type="radio"
