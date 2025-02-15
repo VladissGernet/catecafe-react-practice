@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 
 import {
   StyledAccordion,
@@ -8,7 +8,11 @@ import {
   AccordionContent
  } from './styled';
 
-const Accordion = ({data}) => {
+const Accordion = ({
+  data,
+  isTitleWithRadio,
+  radioSettings,
+}) => {
   if (!data || !data.length) {
     return null;
   }
@@ -32,6 +36,13 @@ const Accordion = ({data}) => {
     setAccordionHeights(newAccordionHeights);
   };
 
+  // Принимаю компонент радио с проверкой на isTitleWithRadio.
+  let RadioComponent = null;
+
+  if (isTitleWithRadio) {
+    RadioComponent = radioSettings.radioComponent;
+  }
+
   return (
     <StyledAccordion>
       {
@@ -41,7 +52,17 @@ const Accordion = ({data}) => {
               <AccordionTitle
                 onClick={() => toggleAccordion(index)}
               >
-                {item.title}
+                { isTitleWithRadio
+                  ? (
+                    <RadioComponent
+                      value={item.title}
+                      radioValueState={radioSettings.radioValueState}
+                      onChange={radioSettings.onRadioChange}
+                    />
+                  )
+                  : (
+                    item.title
+                  )}
               </AccordionTitle>
               <AccordionContentWrapper
                 style={

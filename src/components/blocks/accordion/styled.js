@@ -12,13 +12,11 @@ const AccordionItem = styled.div`
   &:not(:last-child) {
     margin-bottom: 20px;
   }
-
-  outline: 5px solid blue;
 `;
 
 const AccordionTitle = styled.div`
-  background-color: ${(props) => props.theme.colorForButton};
-  color: ${(props) => props.theme.colorTextLight};
+  background-color: ${(props) => props.theme.colorGray};
+  color: ${(props) => props.theme.colorBlackForText};
   padding: 10px;
   border-radius: 10px;
 `;
