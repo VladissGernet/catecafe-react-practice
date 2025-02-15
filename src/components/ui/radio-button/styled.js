@@ -46,7 +46,6 @@ const RadioText = styled.span`
           }
           `
           : css`
-          background-color: ${(props) => props.theme.colorGray};
           cursor: pointer;
 
           &::after {

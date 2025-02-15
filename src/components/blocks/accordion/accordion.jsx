@@ -5,7 +5,8 @@ import {
   AccordionItem,
   AccordionTitle,
   AccordionContentWrapper,
-  AccordionContent
+  AccordionContent,
+  AccordionButton
  } from './styled';
 
 const Accordion = ({
@@ -49,9 +50,7 @@ const Accordion = ({
         data.map((item, index) => {
           return (
             <AccordionItem key={item.id}>
-              <AccordionTitle
-                onClick={() => toggleAccordion(index)}
-              >
+              <AccordionTitle>
                 { isTitleWithRadio
                   ? (
                     <RadioComponent
@@ -63,6 +62,11 @@ const Accordion = ({
                   : (
                     item.title
                   )}
+                <AccordionButton
+                onClick={() => toggleAccordion(index)}
+                type="button"
+                aria-expanded={accordionStatuses[index]}
+                />
               </AccordionTitle>
               <AccordionContentWrapper
                 style={
@@ -73,9 +77,8 @@ const Accordion = ({
               >
                 <AccordionContent
                   ref={(node) => ContentRefs.current[index] = node}
-                >
-                  {item.description}
-                </AccordionContent>
+                  dangerouslySetInnerHTML={{__html: item.description}}
+                />
               </AccordionContentWrapper>
             </AccordionItem>
           )
