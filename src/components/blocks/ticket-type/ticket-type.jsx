@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Accordion } from '/src/components/blocks/accordion/accordion';
 import { AccordionRadio } from '/src/components/blocks/accordion-radio/accordion-radio';
 
-const TicketType = ({ticketOptions}) => {
-  const initialState = ticketOptions[0].title;
-
-  const [radioValueState, setRadioValueState] = useState(initialState);
+const TicketType = ({
+  ticketOptions,
+  radioValueState,
+  setRadioValueState
+}) => {
   const onRadioChange = (e) => setRadioValueState(e.target.value);
 
   return (

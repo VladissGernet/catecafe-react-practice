@@ -12,6 +12,9 @@ const FormOrder = () => {
   const initialDuration = buyOptions.durationOptions[0];
   const [duration, setDuration] = useState(initialDuration);
 
+  const initialState = buyOptions.ticketOptions[0].title;
+  const [radioValueState, setRadioValueState] = useState(initialState);
+
   return (
     <Form>
       <Title level={3} size={TitleSizes.SMALL}>Продолжительность (часов)</Title>
@@ -23,6 +26,8 @@ const FormOrder = () => {
       <Title level={3} size={TitleSizes.SMALL}>Тип билета</Title>
       <TicketType
         ticketOptions={buyOptions.ticketOptions}
+        radioValueState={radioValueState}
+        setRadioValueState={setRadioValueState}
       />
     </Form>
   )
