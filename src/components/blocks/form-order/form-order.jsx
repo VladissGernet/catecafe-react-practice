@@ -9,7 +9,8 @@ import { Duration } from 'src/components/blocks/duration/duration';
 import { TicketType } from 'src/components/blocks/ticket-type/ticket-type';
 
 const FormOrder = () => {
-  const [duration, setDuration] = useState(null);
+  const initialDuration = buyOptions.durationOptions[0];
+  const [duration, setDuration] = useState(initialDuration);
 
   return (
     <Form>
