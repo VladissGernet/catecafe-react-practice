@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import { Accordion } from '/src/components/blocks/accordion/accordion';
 import { RadioButton } from '/src/components/ui/radio-button/radio-button';
 
-const AccordionRadio = ({value, radioValueState, onChange}) => {
+const AccordionRadio = ({
+  value,
+  radioValueState,
+  onChange
+}) => {
   return (
     <RadioButton
       value={value}
@@ -18,7 +22,9 @@ const AccordionRadio = ({value, radioValueState, onChange}) => {
 }
 
 const TicketType = ({ticketOptions}) => {
-  const [radioValueState, setRadioValueState] = useState('');
+  const initialState = ticketOptions[0].title;
+
+  const [radioValueState, setRadioValueState] = useState(initialState);
   const onRadioChange = (e) => setRadioValueState(e.target.value);
 
   return (
@@ -26,8 +32,10 @@ const TicketType = ({ticketOptions}) => {
     data={ticketOptions}
     isTitleWithRadio
     radioSettings={{
-      radioComponent: AccordionRadio,
-      radioValueState, onRadioChange
+      radioComponent:
+        AccordionRadio,
+        radioValueState,
+        onRadioChange
       }}
     />
   )

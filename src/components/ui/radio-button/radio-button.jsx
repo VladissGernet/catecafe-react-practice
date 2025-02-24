@@ -21,6 +21,7 @@ const RadioButton = ({
   const TextComponent = textComponent;
   const isChecked = String(value) === String(selectedValue);
 
+
   return (
     <LabelComponent>
       <VisuallyHiddenInput
