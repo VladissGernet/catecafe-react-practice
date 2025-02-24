@@ -22,7 +22,7 @@ const FormOrder = () => {
       />
       <Title level={3} size={TitleSizes.SMALL}>Тип билета</Title>
       <TicketType
-      ticketOptions={buyOptions.ticketOptions}
+        ticketOptions={buyOptions.ticketOptions}
       />
     </Form>
   )

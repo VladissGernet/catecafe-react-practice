@@ -1,25 +1,7 @@
 import React, { useState } from 'react';
 
 import { Accordion } from '/src/components/blocks/accordion/accordion';
-import { RadioButton } from '/src/components/ui/radio-button/radio-button';
-
-const AccordionRadio = ({
-  value,
-  radioValueState,
-  onChange
-}) => {
-  return (
-    <RadioButton
-      value={value}
-      selectedValue={radioValueState}
-      type="radio"
-      name="ticket-type"
-      onChange={onChange}
-    >
-      {value}
-    </RadioButton>
-  );
-}
+import { AccordionRadio } from '/src/components/blocks/accordion-radio/accordion-radio';
 
 const TicketType = ({ticketOptions}) => {
   const initialState = ticketOptions[0].title;
