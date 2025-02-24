@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 import { DurationUl } from '/src/components/blocks/duration/styled';
+import { Button } from '/src/components/styled';
+
+const StyledButton = styled(Button)`
+  width: 100%;
+  margin-top: 20px;
+`;
 
 const Form = styled.form`
   background-color: ${(props) => props.theme.colorLight};
@@ -16,4 +22,7 @@ const Form = styled.form`
   }
 `;
 
-export { Form };
+export {
+  Form,
+  StyledButton
+};
