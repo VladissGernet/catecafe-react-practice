@@ -9,10 +9,7 @@ import { ScrollToTop } from '/src/components/blocks/scroll-to-top/scroll-to-top'
 import { PageWrapper } from '/src/components/layout/page-wrapper/page-wrapper';
 import { Index } from '/src/components/pages/index/index';
 import { Form } from '/src/components/pages/form/form';
-
-// TODO
-// 6. Создать Form страницу оформления
-// 8. Создать страницу 404
+import { Page404 } from '/src/components/pages/page-404/page-404';
 
 const AppContext = createContext();
 
@@ -26,6 +23,7 @@ const App = () => {
             <Route path="/" element={<PageWrapper />}>
               <Route index element={<Index />} />
               <Route path="form" element={<Form />} />
+              <Route path="*" element={<Page404 />} />
             </Route>
         </Routes>
       </AppContext.Provider>
